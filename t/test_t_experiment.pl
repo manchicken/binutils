@@ -23,6 +23,9 @@ $c->tag($struct_name.'.two', Format => 'String');
 my $sizeof = $c->sizeof($struct_name);
 print "Sizeof($struct_name) is: $sizeof\n";
 
+my %struct_data = map { $c->offsetof($struct_name, $_).': '.$_ => $c->typeof(join('',$struct_name,$_)) } ($c->member($struct_name));
+print Dumper(\%struct_data);
+
 my $infile = IO::File->new("$Bin/theoutput.dat", O_RDONLY) || die "Can't open file: $!";
 $infile->binmode();
 my $bindata = "";

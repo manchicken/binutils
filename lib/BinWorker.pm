@@ -4,7 +4,9 @@ use warnings;
 
 package BinWorker;
 
-use Inline;
+use Convert::Binary::C;
+use IO::File;
+use Readonly;
 
 sub new {
   my ($pkg, %opts) = @_;
@@ -14,98 +16,85 @@ sub new {
   return bless($self, $pkg);
 }
 
-sub strip_matching_entries_from_file {
+Readonly our $STRUCT_BYTE_ALIGNMENT => 4;
+Readonly our $ENDIANNESS => 'LittleEndian';
+
+sub get_include_directories {
   my ($self) = @_;
 
-  my $header  = $self->{header}  || die "No header defined in BinWorker";
-  my $struct  = $self->{struct}  || die "No struct defined in BinWorker";
-  my $field   = $self->{field}   || die "No field defined in BinWorker";
-  my $filnam  = $self->{filnam}  || die "No subject file defined in BinWorker";
-  my $value   = $self->{value}   || die "No value defined in BinWorker";
-  my $compare = $self->{compare} || die "No compare type defined in BinWorker";
-  my $outfil = "${filnam}.output";
+  my @to_return = ();
 
-  my $switch = 'N';
-  if ($compare eq "number") {
-    $switch = 'N';
-  } elsif ($compare eq "string") {
-    $switch = 'S';
-  } else {
-    die "Unknown compare type '$compare'";
+  if (exists($ENV{CPATH})) {
+    push(@to_return, $ENV{CPATH});
+  }
+  if (exists($self->{include})) {
+    push(@to_return, $self->{include});
   }
 
-  my $c = qq{
-    /* */
-    #include <stdlib.h>
-    #include <string.h>
-    #include <stdio.h>
-    #include <$header>
-
-    int _c_run_bin() {
-      $struct one;
-
-      FILE *infile = fopen("$filnam", "rb");
-      if (!infile) {
-        perror("Failed to open file '$filname' for reading");
-        exit(-1);
-      }
-
-      FILE *outfile = fopen("$outfil", "wb");
-      if (!outfile) {
-        perror("Failed to open file '$outfil' for writing");
-        exit(-1);
-      }
-
-      int status = 0;
-      char comptype = '$switch';
-      int skip = 0;
-      while (!feof(infile)) {
-        skip = 0;
-        status = fread(&one, sizeof($struct), 1, infile);
-
-        switch (comptype) {
-          case 'N':
-            if (one.${field} == $value) {
-              skip = 1;
-            }
-            break;
-          case 'S':
-            if (strcasecmp(one.${field}, "$value") == 0) {
-              skip = 1;
-            }
-            break;
-          default:
-            fprintf(stderr, "NO COMPARE TYPE DEFINED!\n");
-            fclose(outfile);
-            fclose(infile);
-            return 0;
-        };
-
-        if (!skip) {
-          fwrite(&one, sizeof($struct), 1, outfile);
-        }
-      }
-      fflush(outfile);
-
-      fclose(infile);
-      fclose(outfile);
-
-      return 1;
-    }
-  //};
-  # /*
-
-  Inline->bind(C=>$c);
-  if (!_c_run_bin()) {
-    print "Failed to run, cleaning up.\n";
-    unlink($outfil);
-    return 0;
-  }
-
-  print "Output file is '$outfil'\n";
-
-  return 1;
+  return @to_return;
 }
+
+sub get_c_type_data {
+  my ($self) = @_;
+
+  if (exists($self->{header})) {
+    return {header => $self->{header}};
+  } elsif (exists($self->{code})) {
+    return {code => $self->{code}};
+  }
+
+  die "No C data defined. Please use key 'header' or 'code' to define C type data.";
+}
+
+sub _my_data {
+  my ($self) = @_;
+
+  my $c = Convert::Binary::C->new(
+    Include => [$self->get_include_directories()], 
+    ByteOrder => $ENDIANNESS, 
+    Alignment=>$STRUCT_BYTE_ALIGNMENT, 
+    OrderMembers=>1
+  );
+
+  # Get the data to work with...
+  my $c_type_data = $self->get_c_type_data();
+  if (exists($c_type_data->{header})) {
+    $c = $c->parse_file($c_type_data->{header});
+  } elsif (exists($c_type_data->{code})) {
+    $c = $c->parse($c_type_data->{code});
+  }
+
+  return $c;
+}
+
+sub get_struct_metadata {
+  my ($self, $struct_name) = @_;
+
+  my $c = $self->_my_data();
+
+  my %to_return = ();
+
+  $to_return{size} = $c->sizeof($struct_name);
+
+  return \%to_return;
+}
+
+# $c->tag($struct_name.'.two', Format => 'String');
+# my $sizeof = $c->sizeof($struct_name);
+# print "Sizeof($struct_name) is: $sizeof\n";
+
+# my $infile = IO::File->new("$Bin/theoutput.dat", O_RDONLY) || die "Can't open file: $!";
+# $infile->binmode();
+# my $bindata = "";
+# while ($infile->sysread($bindata, $sizeof, 0)) {
+#   my $structval = $c->unpack($struct_name, $bindata);
+#   print "Two: ".$structval->{two}."\n";
+
+#   # eval { print hexdump($bindata); };
+#   # if ($@) { print $@; }
+#   print Dumper($structval);
+# }
+
 
 1;
 # */
