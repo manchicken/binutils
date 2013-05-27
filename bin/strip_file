@@ -1,0 +1,53 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+
+use FindBin qw/$Bin/;
+use lib "$Bin/../lib";
+
+use BinWorker;
+use Getopt::Long;
+
+my $header = undef;
+my $struct = undef;
+my $field = undef;
+my $value = undef;
+my $filnam = undef;
+my $compare_type = undef;
+my $help = 0;
+my $result = GetOptions(
+  "header=s"  => \$header,
+  "struct=s"  => \$struct,
+  "field=s"   => \$field,
+  "value=s"   => \$value,
+  "binfile=s" => \$filnam,
+  "type=s"    => \$compare_type,
+  "help|s"    => \$help,
+);
+
+if (!$help || !$result) {
+  print qq{
+  Usage: $0 [opts]
+
+  --header somefile.h
+  --struct [somestruct_t|struct somestruct]
+  --field  [fieldname|substruct.fieldname]
+  --value  value-to-exclude
+  --type   [number|string]
+  --help   This message
+};
+  exit(0);
+}
+
+eval('
+my $binworker = BinWorker->new(
+    header  => $header,
+    struct  => $struct,
+    field   => $field,
+    filnam  => $filnam,
+    value   => $value,
+    compare => $compare_type,
+  );
+
+$binworker->strip_matching_entries_from_file();
+');

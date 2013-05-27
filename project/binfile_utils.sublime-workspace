@@ -1,0 +1,1070 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"_",
+				"_c_run_bin"
+			],
+			[
+				"NSS",
+				"NSSGS_GALLERY_BOX_WIDTH"
+			],
+			[
+				"NSSGS",
+				"NSSGS_GALLERY_BOX_HEIGHT"
+			],
+			[
+				"NSSG",
+				"NSSGS_THUMBNAIL_IMAGE_WIDTH"
+			],
+			[
+				"para",
+				"paragraph3"
+			],
+			[
+				"quote",
+				"quote2"
+			],
+			[
+				"Profile",
+				"ProfilePicture"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
+				"citie",
+				"CitiesProfile"
+			],
+			[
+				"mutable_string_get",
+				"mutable_string_get_length"
+			],
+			[
+				"lib",
+				"libmanchicken"
+			],
+			[
+				"new",
+				"new_size"
+			],
+			[
+				"TEST_",
+				"TEST_STR_TRUNC_LEN"
+			],
+			[
+				"TEST",
+				"TEST_STR_TRUNC_LEN"
+			],
+			[
+				"CU_ASS",
+				"CU_ASSERT_PTR_NOT_NULL"
+			],
+			[
+				"t_m",
+				"t_mutable_string_init_with_value"
+			],
+			[
+				"mut",
+				"mutable_string_init_with_value"
+			],
+			[
+				"mu",
+				"mutable_string_t"
+			],
+			[
+				"LIBM",
+				"LIBMANCHICKEN_OBJS"
+			],
+			[
+				"MA",
+				"MAXIMUM_MUTABLE_STRING_SIZE"
+			],
+			[
+				"url",
+				"url_error"
+			],
+			[
+				"is",
+				"is_error"
+			],
+			[
+				"proto",
+				"PROTO_LEN"
+			],
+			[
+				"sche",
+				"scheme_from_str"
+			],
+			[
+				"pro",
+				"proto_scheme"
+			],
+			[
+				"quer",
+				"query_string"
+			],
+			[
+				"end",
+				"endpoint_free"
+			],
+			[
+				"uri_",
+				"uri_init"
+			],
+			[
+				"en",
+				"entries_len"
+			],
+			[
+				"qs_en",
+				"qs_entry_free"
+			],
+			[
+				"entri",
+				"entries_len"
+			],
+			[
+				"entr",
+				"entry_idx"
+			],
+			[
+				"ent",
+				"entries_len"
+			],
+			[
+				"muta",
+				"mutable_string_init"
+			],
+			[
+				"query_st",
+				"query_string_t"
+			],
+			[
+				"CON",
+				"CONTINUE_NO"
+			],
+			[
+				"TE",
+				"TESTS"
+			],
+			[
+				"ch",
+				"chunk_size"
+			],
+			[
+				"templa",
+				"templatefile"
+			],
+			[
+				"markup",
+				"markup_get_stop_left"
+			],
+			[
+				"NST_MAR",
+				"NST_MARKUPSTOP_RIGHT"
+			],
+			[
+				"NST",
+				"NST_MARKUPSTART_RIGHT"
+			],
+			[
+				"templ",
+				"template_context_t"
+			],
+			[
+				"mutable_",
+				"mutable_string_get_data"
+			],
+			[
+				"mutable_string_i",
+				"mutable_string_is_empty"
+			],
+			[
+				"sr",
+				"src_length"
+			],
+			[
+				"mutable",
+				"mutable_string_get_data"
+			],
+			[
+				"mutable_strin",
+				"mutable_string_t"
+			],
+			[
+				"script_",
+				"script_filename"
+			],
+			[
+				"scr",
+				"script_path"
+			],
+			[
+				"copy",
+				"copylen"
+			],
+			[
+				"script",
+				"script_filename"
+			],
+			[
+				"SCRIPT_",
+				"SCRIPT_FILENAME"
+			],
+			[
+				"http",
+				"http_die"
+			],
+			[
+				"HTTP_ERR",
+				"HTTP_ERROR_FATAL_NO"
+			],
+			[
+				"err",
+				"err"
+			],
+			[
+				"CONTEN",
+				"CONTENT_TYPE_TEXT_PLAIN"
+			],
+			[
+				"HTTP",
+				"HTTPSTAT_NO_STATUS"
+			],
+			[
+				"PA",
+				"PATH_LENGTH"
+			],
+			[
+				"CONTI",
+				"CONTINUE_NO"
+			],
+			[
+				"ERR",
+				"ERR_TPL_CONTENT_NO"
+			],
+			[
+				"INIT",
+				"INIT_TEMPLATE_ERROR_T"
+			],
+			[
+				"ERR_",
+				"ERR_TPL_CONTENT_NO"
+			],
+			[
+				"template_error",
+				"template_error_t"
+			],
+			[
+				"template",
+				"template_file"
+			],
+			[
+				"template_",
+				"template_context_t"
+			],
+			[
+				"HTTPIO_",
+				"HTTPIO_HEADER_LINE_ENDING"
+			],
+			[
+				"http_sta",
+				"http_status_t"
+			],
+			[
+				"httpio_",
+				"httpio_print_header"
+			],
+			[
+				"HTTP_STA",
+				"HTTP_STATUS_LINE_LENGTH"
+			],
+			[
+				"CONTN",
+				"CONTENT_TYPE_TEXT_PLAIN"
+			],
+			[
+				"HTT",
+				"HTTP_HEADER_CONTENT_TYPE"
+			],
+			[
+				"_ht",
+				"_http_print_header_to_stream"
+			],
+			[
+				"HTTP_H",
+				"HTTP_HEADER_LINE_TERMINATOR"
+			],
+			[
+				"_h",
+				"_http_print_stream"
+			],
+			[
+				"unbu",
+				"unbuffered_http_output_t"
+			],
+			[
+				"CFG_HTT",
+				"CFG_HTTP_HEADER_ENTITY_LENGTH"
+			],
+			[
+				"CFG",
+				"CFG_HTTP_HEADER_ENTITY_LENGTH"
+			],
+			[
+				"HTTPSTATLIN",
+				"HTTPSTATLINE_INTERNAL_SERVER_ERROR"
+			],
+			[
+				"field",
+				"field_value"
+			],
+			[
+				"header",
+				"header_entity_t"
+			],
+			[
+				"D",
+				"define"
+			],
+			[
+				"INIT_H",
+				"INIT_HTTP_RESPONSE_HEADER_T"
+			],
+			[
+				"INIT_RE",
+				"INIT_HTTP_REQUEST_HEADER_T"
+			],
+			[
+				"http_stat",
+				"http_status_line_t"
+			],
+			[
+				"LIB",
+				"LIBINCDIR"
+			],
+			[
+				"CC",
+				"CCFLAGS"
+			],
+			[
+				"CFG_QS",
+				"CFG_QS_KEY_LENGTH"
+			],
+			[
+				"key",
+				"key_len"
+			],
+			[
+				"query",
+				"query_string_t"
+			],
+			[
+				"__",
+				"_CTX_"
+			],
+			[
+				"CF",
+				"CGF_QS_ENTRY_LIMIT"
+			],
+			[
+				"SRC",
+				"SRCDIR"
+			],
+			[
+				"lo",
+				"lookup_key"
+			],
+			[
+				"ver",
+				"verify_map"
+			],
+			[
+				"ro",
+				"rownum"
+			],
+			[
+				"failure",
+				"failures"
+			],
+			[
+				"CH",
+				"CHG_DATES_NOT_RIGHT"
+			],
+			[
+				"AD",
+				"ADJ_AMT_NOT_MATCHED"
+			],
+			[
+				"Activ",
+				"ActiveDirectory"
+			],
+			[
+				"map",
+				"map_canvas"
+			],
+			[
+				"confi",
+				"configureMaps"
+			],
+			[
+				"ava",
+				"availability_array"
+			],
+			[
+				"str",
+				"strlen"
+			],
+			[
+				"ma",
+				"maxBr"
+			],
+			[
+				"main",
+				"mainImage"
+			],
+			[
+				"actio",
+				"actionName"
+			],
+			[
+				"array_va",
+				"array_values"
+			],
+			[
+				"arr",
+				"array_count_values"
+			],
+			[
+				"array_k",
+				"array_key_exists"
+			],
+			[
+				"desc",
+				"description"
+			],
+			[
+				"count",
+				"count"
+			],
+			[
+				"E_",
+				"E_NOTICE"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/manchicken/Documents/Devel/binfile_utils/lib/BinWorker.pm",
+			"settings":
+			{
+				"buffer_size": 2344,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/manchicken/Documents/Devel/binfile_utils/bin/strip_file",
+			"settings":
+			{
+				"buffer_size": 45,
+				"line_ending": "Unix",
+				"name": "#!/usr/bin/env perl"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 367.0,
+		"selected_items":
+		[
+			[
+				"save",
+				"Project: Save As"
+			],
+			[
+				"perl",
+				"Set Syntax: Perl"
+			],
+			[
+				"c",
+				"Set Syntax: C"
+			],
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"preview",
+				"Markdown Preview: preview in Browser"
+			],
+			[
+				"prev",
+				"Markdown Preview: preview in Browser"
+			],
+			[
+				"mark",
+				"Markdown Preview: open Markdown Cheat sheet"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"project",
+				"Project: Close"
+			],
+			[
+				"projec",
+				"Project: Save As"
+			],
+			[
+				"gdb",
+				"SublimeGDB: Stop Debugging"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"debug",
+				"SublimeGDB: Start Debugging"
+			],
+			[
+				"convert",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"p",
+				"Project: Close"
+			],
+			[
+				"pro",
+				"Project: Close"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"build",
+				"Build: Build"
+			],
+			[
+				"tag",
+				"CTags: Rebuild Tags"
+			],
+			[
+				"make",
+				"Set Syntax: Makefile"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"rev",
+				"File: Revert"
+			],
+			[
+				"rever",
+				"File: Revert"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"add f",
+				"Project: Add Folder"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": true,
+		"show_open_files": true,
+		"show_tabs": true,
+		"side_bar_visible": true,
+		"status_bar_visible": true
+	},
+	"file_history":
+	[
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/3AC10443-52BF-419D-8B10-8CA8773F522A/database.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/70E320FB-7D25-4754-AB11-8EF979D70AB5/schema.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/0051C161-E2CF-4CC7-A3DC-372ABD1A25A8/core.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/9C8E5EF7-8B4D-4110-AF0D-10F397F45B11/admin_add.ctp",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/8C8CE6E9-EDB8-4A29-B7C6-FB596C7DA87C/admin_view.ctp",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/44506F19-7972-4A00-8F81-F62774EAD2C6/nssgs_profile_gallery.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/4A018507-F6AE-4A4B-B832-B09372F27E57/TinymceHelper.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/616226E6-355C-4102-8234-4BDEBAEA2800/admin_edit.ctp",
+		"/Users/manchicken/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/0ADC6990-EE56-40CC-B20A-AEB9E049F30B/schema.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/F4A8D68D-3206-4100-B2B6-EDED66396406/admin_ranks.ctp",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/185B4130-065C-48CF-894E-8FFF88A5BFE8/admin_index.ctp",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/2F846D27-C2BA-417E-A0A1-E16B475B3B53/routes.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/7A27D90F-8EE2-483D-B7A3-4C1056E16614/core.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/8B48B03B-3509-4C62-83CF-CD4334B065E9/UsersController.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/F76242D6-E8EA-450F-92C7-B609FBDEB9FF/default.ctp",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/7FA922D2-07FD-457E-964A-021B4205A1F4/Profile.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/0DA526C1-468C-4CD1-9AD7-3FCEF983F8D3/ProfilesController.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/594B5A51-44B6-4224-AA6C-B98E7C9AA281/CitiesController.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/DC9A7CBE-C366-4B34-9F44-F35C563E2338/City.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/02F8A426-6A3A-4DBF-9D29-7E8648FD9A79/home.ctp",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/EF582157-524F-4B33-A664-D9CF76F0BADB/nssgs_profile_gallery.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/83C85DB4-E736-493A-9848-28FA4485A581/admin_view.ctp",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/99C602F9-F6DA-4B94-B5F1-12D936073B53/ProfilesController.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/B4056107-79AA-4389-961C-B265BD56CEF3/ProfilesController.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/F91E1D84-F79B-43A9-924F-956F2BE00418/database.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/8D5BF833-858B-45C1-9341-842C78A44BDB/core.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/41ACB151-16E6-43E5-8700-3DB18F1F01F4/City.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/0D81C7D3-8EB9-4670-8DDD-0D76D437135C/City.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/EBCA91D8-26C1-49D0-95AF-34017A441B41/admin_add.ctp",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/5F9A375B-BF69-475B-A126-A5E7FABD0B07/admin_index.ctp",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/4C3A9CFB-80C6-40A7-BE0A-390989A7A9B3/admin_edit.ctp",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/B85CFFCA-F250-4DE2-A21D-4C064EE7611A/admin_view.ctp",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/B50B9FE0-D3D0-4C45-82AD-DC48E258B661/CitiesProfiles.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/28E58613-2D89-406B-A935-A82357AB2128/City.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/8882E5A1-3D1C-4347-8A2F-6EF24D733F7B/Profile.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/1295CFF8-D75D-4131-9A05-48EC4442A841/Profile.php",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/62DBD457-DEC0-4DC9-80B1-9EB62427E7C6/admin_add.ctp",
+		"/Volumes/Gentlemen Dev/public_html/backend/app/Model/Profile.php",
+		"/Volumes/Gentlemen Dev/public_html/backend/app/Controller/ProfilePicturesController.php",
+		"/Volumes/Gentlemen Dev/public_html/backend/app/Config/routes.php",
+		"/Volumes/Gentlemen Dev/public_html/backend/app/Config/Schema/sessions.php",
+		"/Volumes/Gentlemen Dev/public_html/backend/app/Config/core.php",
+		"/Volumes/Gentlemen Dev/public_html/backend/app/View/Cities/admin_add.ctp",
+		"/Volumes/Gentlemen Dev/public_html/backend/app/Controller/CitiesController.php",
+		"/Users/manchicken/Sites/bornquist/createdb.sql",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/FEF52683-42DB-411D-BED1-CB24C4B6F264/.htaccess",
+		"/Users/manchicken/Documents/Devel/libmanchicken/include/mutable_string.h",
+		"/Users/manchicken/Documents/Devel/libmanchicken/t/t_mutable_string.c",
+		"/Users/manchicken/Documents/Devel/libmanchicken/t/Makefile.am",
+		"/Users/manchicken/Documents/Devel/libmanchicken/include/findbin.h",
+		"/Users/manchicken/Documents/Devel/libmanchicken/aclocal.m4",
+		"/Users/manchicken/Documents/Devel/libmanchicken/configure.ac",
+		"/Users/manchicken/Documents/Devel/libmanchicken/src/Makefile.am",
+		"/Users/manchicken/Documents/Devel/libmanchicken/src/mutable_string.h",
+		"/Users/manchicken/Documents/Devel/webchunks/Makefile",
+		"/Users/manchicken/Documents/Devel/webchunks/Webchunks.sublime-workspace",
+		"/Users/manchicken/Documents/Devel/libnssweb/src/nssurl.c",
+		"/Users/manchicken/Downloads/msp430mcu-20120716/upstream/msp430.h",
+		"/Users/manchicken/Downloads/msp430mcu-20120716/upstream/msp430g2231.h",
+		"/Users/manchicken/Downloads/demo-breathing-led-gcc-4.5.3/breathing-led.c",
+		"/Users/manchicken/Documents/Devel/libnssweb/Makefile",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/nsshttp.h",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/strmap.h",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/nssurl.h",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/nss_mutable_string.h",
+		"/Users/manchicken/Documents/Devel/libnssweb/src/nss_mutable_string.c",
+		"/Users/manchicken/Documents/Devel/libnssweb/tests/url1.c",
+		"/Users/manchicken/Documents/Devel/libnssweb/tests/url1.test",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/nsshttpio.h",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/nsshttp_content_type.h",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/nsshttp_status.h",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/nsshttprequest.h",
+		"/Users/manchicken/Documents/Devel/libnssweb/src/nsshttprequest.c",
+		"/Users/manchicken/Documents/Devel/libnssweb/src/nsshttp.c",
+		"/Users/manchicken/Documents/Devel/libnssweb/src/nsshttpio.c",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/nsstemplate.h",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/nssweb_config.h",
+		"/Users/manchicken/Documents/Devel/libnssweb/tests/template1.c",
+		"/Users/manchicken/Documents/Devel/libnssweb/src/nsstemplate_markup.c",
+		"/Users/manchicken/Documents/Devel/libnssweb/src/nsstemplate.c",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/nsstemplate_markup.h",
+		"/Users/manchicken/Downloads/nikeplusphp.4.3.php",
+		"/Users/manchicken/Documents/Devel/libnssweb/samples/template1.chtml",
+		"/Users/manchicken/Documents/Devel/libnssweb/src/strmap.c",
+		"/Users/manchicken/Documents/Devel/cakesmeeting/src/test.c",
+		"/Users/manchicken/Documents/Devel/libnssweb/src/nsstemplate_execution.c",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/nsstemplate_execution.h",
+		"/Users/manchicken/Documents/Devel/libnssweb/defs/nsstemplate_markup.l",
+		"/Users/manchicken/Documents/Devel/cakesmeeting/Makefile",
+		"/Users/manchicken/Library/Application Support/Sublime Text 2/Packages/CTags/README.creole",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/nssweb_types.h",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/nssweb.h",
+		"/Users/manchicken/Documents/Devel/libnssweb/LICENSE",
+		"/Users/manchicken/Documents/Devel/libnssweb/include/nsshttp_errors.h",
+		"/Users/manchicken/Documents/Devel/libnssweb/README.md",
+		"/Users/manchicken/Documents/Devel/libnssweb/LICENSE.md",
+		"/Users/manchicken/Documents/workspace/Cakes Meeting/app.yaml",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/D660042C-B6E9-4ADD-863F-750251D98FC1/glucool_backup.dat",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/4CC6AC3B-0159-4BC4-B64F-06555F9E8A68/orig.glucool_backup.dat",
+		"/Users/manchicken/Desktop/Sandbox/Notsosoft Backups/admin 2/anyconsole.com/wp-config.php",
+		"/Users/manchicken/Desktop/Sandbox/Notsosoft Backups/mysql.backup 2.sql",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/3522DDBF-CEFA-445E-A922-FC42A9670926/glucool_backup.dat",
+		"/Users/manchicken/Downloads/starter/main.py",
+		"/Users/manchicken/Downloads/starter/data.xml",
+		"/Users/manchicken/Google Drive/glucool_backup.dat",
+		"/Users/manchicken/Desktop/Sandbox/diabetesdb.dat",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/91B03BE7-26B1-4F18-9F43-332FA705C252/Spec.pm",
+		"/Users/manchicken/Desktop/diabetesdb.dat",
+		"/Users/manchicken/Desktop/Sandbox/glucool_backup.dat",
+		"/Users/manchicken/Desktop/Sandbox/import_glucool_backup.dat",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/62B3FFE5-10D1-4D1F-B85C-F044D76E6B3D/diabetesdb.dat",
+		"/Users/manchicken/Google Drive/diabetesdb.dat",
+		"/Users/manchicken/Google Drive/diabetesdb (2).dat",
+		"/Users/manchicken/Google Drive/diabetesdb (1).dat",
+		"/Users/manchicken/Google Drive/diabetesdb.txt",
+		"/Users/manchicken/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/947A97DC-1901-4ACC-BF2F-4B2A13D1A6B9/foo.csv",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/3696C0B9-5A93-46E9-B7D0-A763F86A0004/ban_and_ptns_to_html_excel.pl",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/634C542D-8ACF-491D-8CC8-C3A030CA593C/DbFactory.pm",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/DC28FA71-CAF7-452C-A4E1-C9854EC80E95/bl.incorrectRCmerge1706201201.20120617.layout",
+		"/Volumes/michaest$/Sandbox/bl.incorrectRCmerge1706201201.20120617.layout",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/F21D1631-682C-44BF-B0BE-2ED3A034DCD9/ItvProblemDetection.pm",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/7AFCE2F4-B62D-4641-8A00-D3C6EAA7068B/DoxDateParser.pm",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/E755E2BC-324F-4311-8220-101F51811F51/rc_verify.pl",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/13510D19-DE4B-48D7-83CA-608E47977847/Android.pm",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/736AD7A7-F305-4B66-ABDF-A85D3BD89E74/hello_world.pl",
+		"/Users/manchicken/Library/Caches/Cleanup At Startup/Transmit/963ACAE5-E5AA-440D-B3C1-66B9A63F3E91/readonly_test.pl"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"<img",
+			"NSSGS_THUMB",
+			"height",
+			"link",
+			"backend",
+			"CAKE",
+			"setContent",
+			"citiespro",
+			"citiesprofile",
+			"city",
+			"sizeof",
+			"NSS_",
+			"NSS",
+			"NSS_",
+			"libnssweb",
+			"/*",
+			"libnssweb",
+			"url_error",
+			"WDTCTL",
+			"query_string",
+			"inline",
+			";\n",
+			"script_filename",
+			"errno",
+			"stat",
+			"objs",
+			"_http_print_stream",
+			"inline",
+			"  ",
+			"645",
+			"644",
+			"data_bg",
+			"data_weight",
+			"weight",
+			"data_wei",
+			"weight",
+			"data_weight",
+			"]",
+			"data_bg",
+			"to_sql_date",
+			"packed",
+			"**",
+			"makeT",
+			"paint",
+			"binddn",
+			"Auth",
+			"cn=",
+			"adLDAP",
+			"CN",
+			"ADLDAP_CONTAINER",
+			"CN=",
+			"8888",
+			"dialog",
+			"map_canvas",
+			".js",
+			"js",
+			"map_direct",
+			"GMap",
+			"gmapcan",
+			"firstCh",
+			"configureMaps",
+			"addresses",
+			"main",
+			"$url",
+			"param",
+			"qr",
+			"brValues",
+			"availability_array",
+			"Studio",
+			"availability_array",
+			"/search",
+			"include",
+			"availability_array",
+			"debug",
+			"foreach",
+			"layout",
+			"mobile",
+			"ROOT",
+			"root",
+			"ROOT",
+			"display",
+			"link",
+			"debugg",
+			"prices",
+			"admin_login",
+			"mac",
+			"script",
+			"mac",
+			"domain",
+			"mac",
+			"domain"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"nsserror",
+			"url_error",
+			"_http_print_stream_unbuffered"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/manchicken/Documents/Devel/binfile_utils/lib/BinWorker.pm",
+					"settings":
+					{
+						"buffer_size": 2344,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2316,
+								2316
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Perl/Perl.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/manchicken/Documents/Devel/binfile_utils/bin/strip_file",
+					"settings":
+					{
+						"buffer_size": 45,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								45
+							]
+						],
+						"settings":
+						{
+							"auto_name": "#!/usr/bin/env perl",
+							"syntax": "Packages/Perl/Perl.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"config",
+				"include/config.php"
+			],
+			[
+				"app_contr",
+				"app/controllers/app_controller.php"
+			],
+			[
+				"app_",
+				"_search/app_controller.php"
+			],
+			[
+				"content_pages",
+				"app/controllers/content_pages_controller.php"
+			],
+			[
+				"content_page",
+				"app/views/elements/content_page.ctp"
+			],
+			[
+				"url_view",
+				"app/views/content_pages/url_view.ctp"
+			],
+			[
+				"confi",
+				"include/config.php"
+			],
+			[
+				"contactus",
+				"app/views/pages/mobile/contactus.ctp"
+			],
+			[
+				"users_cont",
+				"app/controllers/users_controller.php"
+			],
+			[
+				"propertyinfo.php",
+				"includes/php/PropertyInfo.php"
+			],
+			[
+				"default.ctp",
+				"app/views/layouts/default.ctp"
+			],
+			[
+				"apt.",
+				"apt.php"
+			],
+			[
+				"app_controller",
+				"app/controllers/app_controller.php"
+			],
+			[
+				"vipropinde",
+				"app/views/properties/index.ctp"
+			],
+			[
+				"viesearinde",
+				"app/views/search/index.ctp"
+			],
+			[
+				"app_con",
+				"app/controllers/app_controller.php"
+			],
+			[
+				"header",
+				"include/header.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 172.0,
+	"status_bar_visible": true
+}
