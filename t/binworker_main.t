@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 3;
+use Test::More tests => 6;
 
 use FindBin qw{$Bin};
 use Readonly;
@@ -14,20 +14,26 @@ use lib "$Bin/../lib";
 
 sub BEGIN {
   use_ok('BinWorker');
+
+  if (!(-r "$Bin/../t/theoutput.dat")) {
+    die "The output file 'theoutput.dat' must exist in the test directory prior to running tests. Generate it using the write_test_t program.";
+  }
 }
 
-sub test_get_struct_metadata {
-  my $inst = BinWorker->new(
-    include=>"$Bin",
-    header=>"$Bin/test_t.h",
-  );
+ok(my $inst = BinWorker->new(
+  include=>"$Bin",
+  header=>"$Bin/test_t.h",
+), "Get a new BinWorker...");
 
-  ok(my $meta = $inst->get_struct_metadata('test_t'), "Get the metadata...");
-  is($meta->{size}, $TEST_T_SIZE, "Make sure the size matches what we expected...");
-  print Dumper($meta);
-}
-
-&test_get_struct_metadata;
+ok(my $meta = $inst->get_struct_metadata('test_t'), "Get the metadata...");
+is($meta->{size}, $TEST_T_SIZE, "Make sure the size matches what we expected...");
+# print Dumper($meta);
+ok($inst->validate_data_file("$Bin/../t/theoutput.dat", "test_t"),
+  "Verify that we can validate our file...");
+ok(my $record = $inst->get_next_record('test_t'), "Verify I can get a record...");
+is($record->{one}, 1, 'Verify that struct element named "one" has value 1...');
+is($record->{two}, "XXX: '0'", 'Verify that struct element named "two" matches pattern "XXX: \'%d\'"...');
+print Dumper($record);
 
 # $c->tag($struct_name.'.two', Format => 'String');
 # my $sizeof = $c->sizeof($struct_name);

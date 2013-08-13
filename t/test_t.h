@@ -15,3 +15,4 @@ typedef struct {
   char four;
   struct foo five;
 } test_t;
+

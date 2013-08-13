@@ -1,0 +1,84 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+
+use Term::ReadLine;
+use Readonly;
+
+use Data::Dumper;
+
+Readonly our $PROGRAM_TITLE => "Binary File Navigator";
+Readonly our $DEFAULT_PROMPT => "filenav: ";
+
+our %global = ();
+our %commands = ();
+
+sub hasvalue {
+  my ($test) = @_;
+
+  return 0 unless defined($test);
+  return 0 if (ref(array($test)) && scalar(@$test) == 0);
+  return 0 if ($test eq '');
+
+  return 1;
+}
+
+sub haskey {
+  my ($test, $key) = @_;
+
+  return 0 unless (ref($test));
+  return 0 unless (exists($test->{$key}));
+
+  return 1;
+}
+
+sub haskeywithvalue {
+  my ($test, $key) = @_;
+
+  return 0 unless (haskey($test, $key));
+  return 0 unless (hasvalue($test->{$key}));
+
+  return 1;
+}
+
+sub register_command {
+  my ($name, %opts) = @_;
+
+  $commands{$name} = {%opts};
+}
+
+our $term = undef;
+
+sub start_mainloop {
+  $global{name}   ||= $PROGRAM_TITLE;
+  $global{prompt} ||= $DEFAULT_PROMPT;
+
+  $term = Term::ReadLine->new($global{name});
+  my $OUT = $term->OUT || \*STDOUT;
+  while ( defined (my $_cmd = $term->readline($global{prompt})) ) {
+    my ($cmd) = (split(m/\b/, 2))[0];
+    print Dumper($_cmd);
+    if (!exists($commands{$cmd})) {
+      print "Unknown command '$cmd'.\n";
+      next;
+    }
+    
+    my $res = $commands{$cmd}->($_cmd);
+    warn $@ if $@;
+    print $OUT $res, "\n" unless $@;
+    $term->addhistory($_) if /\S/;
+  }
+
+  return 0;
+}
+
+sub switch_file {
+  my ($file) = @_;
+  $global{data_file} = $file;
+
+  print "File changed: '$file'\n";
+
+  return;
+}
+
+exit start_mainloop();
