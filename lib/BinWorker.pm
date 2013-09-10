@@ -34,7 +34,11 @@ sub get_include_directories {
     push(@to_return, $ENV{CPATH});
   }
   if (exists($self->{include})) {
-    push(@to_return, $self->{include});
+    if (ref($self->{include}) eq 'ARRAY') {
+      push(@to_return, @{$self->{include}});
+    } else {
+      push(@to_return, $self->{include});
+    }
   }
 
   return @to_return;
