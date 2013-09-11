@@ -8,16 +8,24 @@ use Readonly;
 use Data::Dumper;
 
 Readonly our $PROGRAM_TITLE => "Binary File Navigator";
-Readonly our $DEFAULT_PROMPT => "filenav: ";
+Readonly our $DEFAULT_PROMPT => "filenav";
 
-our %global = ();
+our %global = (
+  data_file => undef,
+  prompt => $DEFAULT_PROMPT,
+  worker => undef,
+
+  header_file => undef,
+  struct_type => undef,
+  include_path => undef,
+);
 our %commands = ();
 
 sub hasvalue {
   my ($test) = @_;
 
   return 0 unless defined($test);
-  return 0 if (ref(array($test)) && scalar(@$test) == 0);
+  return 0 if (ref($test) eq 'ARRAY' && scalar(@$test) == 0);
   return 0 if ($test eq '');
 
   return 1;
@@ -41,10 +49,36 @@ sub haskeywithvalue {
   return 1;
 }
 
-sub register_command {
-  my ($name, %opts) = @_;
+sub open_file {
+  $global{worker} = BinWorker->new(
+    include=>$global{include_path},
+    header=>$global{header_file});
 
-  $commands{$name} = {%opts};
+  $global{meta} = $global{worker}->get_struct_metadata($global{struct_type});
+
+  # Validate the file or throw an error (and clean up.)
+  if (!$global{worker}->validate_data_file($global{data_file}, $global{struct_type})) {
+    print "Unable to validate file ".$global{data_file}.".\n";
+    undef($global{worker});
+    undef($global{meta});
+  }
+
+  return;
+}
+
+sub close_file
+
+sub register_command {
+  my ($name, $sub) = @_;
+
+  if (ref($name) eq 'ARRAY') {
+    for my $nam (@$name) {
+      $commands{$nam} = $sub;
+    }
+    return;
+  }
+  $commands{$name} = $sub;
+  return;
 }
 
 our $term = undef;
@@ -55,21 +89,45 @@ sub start_mainloop {
 
   $term = Term::ReadLine->new($global{name});
   my $OUT = $term->OUT || \*STDOUT;
-  while ( defined (my $_cmd = $term->readline($global{prompt})) ) {
-    my ($cmd) = (split(m/\b/, 2))[0];
-    print Dumper($_cmd);
-    if (!exists($commands{$cmd})) {
+  while ( defined (my $_cmd = $term->readline(_prompt())) ) {
+    my ($cmd, @args) = (split(m/\s+/, $_cmd));
+    print Dumper([$cmd, \@args]);
+    if (!haskeywithvalue(\%commands, $cmd)) {
       print "Unknown command '$cmd'.\n";
       next;
-    }
+    }l
     
-    my $res = $commands{$cmd}->($_cmd);
-    warn $@ if $@;
-    print $OUT $res, "\n" unless $@;
-    $term->addhistory($_) if /\S/;
+    my $res = $commands{$cmd}->(@args);
+
+    $term->addhistory($_cmd) if $cmd =~ /\S/;
   }
 
   return 0;
+}
+
+sub _prompt {
+  if (haskeywithvalue(\%global, 'data_file')) {
+    return $global{prompt}.'('.$global{data_file}.'): ';
+  } else {
+    return $global{prompt}.': ';
+  }
+}
+
+sub help {
+  print <<EOHELP;
+Commands:
+  - exit|quit|q ......... Leave the program
+  - file FILENAME ....... Change the data file being used
+  - header HEADER_FILE .. Change the C header file being used
+  - help|h|? ............ Show this message
+  - struct STRUCT_T ..... Change the struct type being used
+EOHELP
+
+  return;
+}
+
+sub exit_program {
+  exit(0);
 }
 
 sub switch_file {
@@ -80,5 +138,35 @@ sub switch_file {
 
   return;
 }
+
+sub switch_header {
+  my ($header) = @_;
+
+  $global{header_file} = $header;
+
+  print "Header changed: '$header'\n";
+  return;
+}
+
+sub set_include_path {
+  my ($path) = @_;
+  $global{include_path} = [split(m/:/,$paths)];
+
+  print "Include path set: ".join(':', @{$global{include_path}})."\n";
+}
+
+sub dump_params {
+  print "File: ".($global{data_file}||'Undefined')."\n",
+        "Header: ".($global{header_file}||'Undefined')."\n",
+        "Struct: ".($global{struct_type}||'Undefined')."\n",
+        "Include Path: ".(join(":", ($global{include_path}||[]))||"Undefined")."\n",
+  ;
+}
+
+register_command([qw/help h ?/], \&help);
+register_command([qw/exit quit q/], \&exit_program);
+register_command('file', \&switch_file);
+register_command('header', \&switch_header);
+register_command('params', \&dump_params);
 
 exit start_mainloop();
