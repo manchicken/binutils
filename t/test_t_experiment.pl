@@ -4,7 +4,6 @@ use strict;use warnings;
 use Convert::Binary::C;
 use FindBin qw{$Bin};
 use Data::Dumper;
-use Data::Hexdumper;
 use IO::File;
 use Readonly;
 
@@ -31,9 +30,8 @@ $infile->binmode();
 my $bindata = "";
 while ($infile->sysread($bindata, $sizeof, 0)) {
   my $structval = $c->unpack($struct_name, $bindata);
-  # print "Two: ".$structval->{two}."\n";
+  print "Two: ".$structval->{two}."\n";
 
-  # eval { print hexdump($bindata); };
-  # if ($@) { print $@; }
-  # print Dumper($structval);
+  if ($@) { print $@; }
+  print Dumper($structval);
 }

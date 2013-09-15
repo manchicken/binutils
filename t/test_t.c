@@ -4,7 +4,7 @@
 #include <string.h>
 
 #define OUTFILE "theoutput.dat"
-#define RECLIMIT 200000
+#define RECLIMIT 5
 
 int main() {
   FILE *outfile = fopen(OUTFILE, "wb");
